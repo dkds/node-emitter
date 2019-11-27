@@ -1,17 +1,29 @@
 {
   "author": "Will Wen Gunn <willwengunn@gmail.com> (lifemap.in)",
   "name": "emitter",
-  "description": "Faster events controller for class and object",
-  "version": "0.0.5",
+  "description": "Fork of Will Wen Gunn's emitter library built with latest build tools.",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:iwillwen/node-emitter.git"
+    "url": "https://github.com/dkds/node-emitter.git"
   },
-  "main": "dist/emitter.js",
+  "main": "dist/emitter.cjs.js",
+  "browser": "dist/emitter.js",
+  "module": "dist/emitter.esm.js",
   "license": "MIT",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.3.0",
-    "gulp-sourcemaps": "^1.6.0"
-  }
+  "scripts": {
+    "build-gulp": "gulp babel-compile",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-modules-umd": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "rollup": "^1.24.0",
+    "rollup-plugin-copy": "^3.1.0"
+  },
+  "dependencies": {}
 }
